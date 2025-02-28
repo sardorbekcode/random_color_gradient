@@ -1,4 +1,4 @@
-const body = document.querySelector('body');
+const boy = document.querySelector('body');
 const container = document.querySelector('.container');
 const colorText = document.querySelector('.color-text');
 
@@ -27,30 +27,10 @@ function getGradient() {
     let color = '#';
     for (let i = 0; i < 6; i++) {
         const randomNumber = Math.trunc(Math.random() * values.length);
-        color += values[randomNumber];
+        console.log(randomNumber);
+        
     }
-    return color;
+        
 }
 
-// Function to change background color
-
-function setGradient() {
-    const color1 = getGradient();
-    const color2 = getGradient();
-    const randomDeg = Math.trunc(Math.random() * 360);
-    const bgColor = `linear-gradient(
-    ${randomDeg}deg,
-    ${color1},
-    ${color2}
-    )`;
-
-    body.style.background = bgColor;
-    colorText.textContent = bgColor;
-    
-    
-}
-
-setGradient()
-
-container.addEventListener('click', setGradient);
-
+getGradient();
